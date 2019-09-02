@@ -1,0 +1,87 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import "utils/modules.scss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-75;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h2 {
+  line-height: 24px;
+  font-size: 19px;
+}
+
+h1,
+h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: $dark-100;
+  font-style: normal;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-50;
+  transition: 
+    &:hover {
+      color: $dark-75;
+      font-weight: bold;
+    }
+}
+
+// Instead .container 
+
+section {
+  padding: 0 calc(50% - 580px);
+
+  @media ($desktopWidth) {
+    padding: 0 calc(50% - 580px);
+  }
+
+  @media ($smDesktopWidth) {
+    padding: 0 calc(50% - 480px);
+  }
+
+  @media ($tableWidth) {
+    padding: 0 calc(50% - 360px);
+  }
+
+  @media ($phoneWidth) {
+    padding: 0 calc(50% - 220px);
+  }
+
+  @media ($smPhoneWidth) {
+    padding: 0 calc(50% - 130px);
+  }
+}
