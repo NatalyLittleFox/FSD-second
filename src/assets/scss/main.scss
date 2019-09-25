@@ -5,6 +5,14 @@
 @import "utils/reset";
 @import "utils/modules.scss";
 
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+box-sizing: inherit;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;

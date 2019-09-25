@@ -8,6 +8,8 @@
     padding: 13px 0 13px 15px;
     outline: none;
     color: $dark-75;
+
+
     @include placeholder {
         color: $dark-25;
     }
@@ -15,9 +17,53 @@
     &:focus,
     &:hover {
         border: 1px solid rgba(31, 32, 65, 0.5);
+
         @include placeholder {
             color: $dark-75;
         }
     }
 
+    &_masked {
+        @include placeholder {
+            text-transform: uppercase;
+        }
+    }
+
+    &_subscription {
+        position: relative;
+        display: flex;
+        padding: 0;
+        max-width: 267px;
+        &__input {
+            margin-left: 0;
+            border: none;
+            display: block;
+            background: transparent;
+            outline: none;
+            width: 223px;
+            padding: 13px 0 13px 15px;
+        }
+
+        &__button {
+            display: block;
+            height: 44px;
+            width: 44px;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 auto;
+            -ms-flex: 1 auto;
+            flex: 1 auto;
+            background-image: url('/assets/img/arrow_forward.svg');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: $transition;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
 }
+

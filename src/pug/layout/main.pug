@@ -3,17 +3,16 @@ block variables
 
 doctype html
 html(lang='en')
-  head
-    meta(charset='utf-8')
-    title #{title}
-    meta(name="description", content=description)
-    block head
+    head
+        meta(charset='utf-8')
+        title #{title}
+        meta(name="description", content=description)
+        block head
 
-  body(class=pageClass)
-    .wrapper
-      #app
-        include ../includes/modules/header/header_default
-        block content
-        include ../includes/modules/footer/footer
+    body(class=pageClass)
+        .wrapper
+            #app
+                include ../includes/modules/header/header_default
+                block content
 
-    block script
+        block scripts

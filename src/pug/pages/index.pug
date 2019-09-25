@@ -1,13 +1,16 @@
 extends ../layout/main
 
+block head 
+
+
 block variables
-  - var title = 'Webpack + Pug';
-  - var description = 'Description for Webpack + Pug';
-  - var pageClass = 'index-page';
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
 
 block content 
-  input.text-field(placeholder="kek")
+    include ../includes/modules/form-elements/dropdown/dropdown
+        +dropdownCountItem("Привет")
+        +dropdownItem('Хех')
 
-block script
-  script(type='text/javascript').
-    
+block scripts
