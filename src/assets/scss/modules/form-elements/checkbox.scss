@@ -1,0 +1,138 @@
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: none;
+    z-index: 1;
+    // cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+
+
+    &-wrapper {
+        margin: 5.28px 0;
+        display: flex;
+    }
+
+    &__input[type="checkbox"] {
+        width: inherit;
+        height: inherit;
+        box-sizing: border-box;
+        cursor: pointer;
+        opacity: 0;
+
+        &:checked {
+            &+.checkbox__label {
+                border-color: $purple;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    &__label {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        border: 1px solid;
+        border-color: $dark-25;
+        border-radius: 4px;
+        transition: $transition;
+    
+        &:before {
+            transition: $transition;
+            content: '';
+            opacity: 0;
+            background-image: url('/assets/img/checkbox-checked.svg');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: inherit;
+            height: inherit;
+            display: inline-block;
+            z-index: 2;
+            margin-top: -1px;
+            margin-left: -1px;
+        }
+    }
+
+    &__descr {
+        font-size: 1rem;
+        line-height: 20px;
+        color: $dark-50;
+    }
+
+    &__descr,
+    &_rich__text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: normal;
+        margin-left: 10px;
+    }
+
+    &_rich {
+        line-height: 5px;
+        &__text {
+            font-family: Montserrat;
+            font-style: normal;
+
+            &__heading {
+                color: $dark-75;
+                font-weight: bold;
+                font-size: 1rem;
+                height: 20px;
+                margin: 0;
+                line-height: 1.29rem;
+            }
+
+            &__descr {
+                display: inline-block;
+                line-height: 1rem;
+                color: $dark-50;
+                font-size: .85rem;
+            }
+        }
+    }
+    &_expandable {
+        display: flex;
+        height: 44px;
+        &__heading {
+            height: 100%;
+            margin-bottom: 0;
+            line-height: 3.14rem;
+        }
+        &__button {
+            width: 44px;
+            height: 44px;
+            background-color: transparent;
+            background-image: url('/assets/img/expand_more.svg');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+            border: none;
+            transition: $transition;
+            margin: 0 0 0 15px;
+            &:focus {
+                outline: none
+            }
+            &:hover {
+                background-image: url('/assets/img/expand_more-75.svg');
+            }
+
+            &_rotate {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__list {
+
+        }
+    }
+}

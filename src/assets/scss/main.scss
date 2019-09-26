@@ -7,6 +7,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 *, *::after, *::before {
@@ -66,6 +67,18 @@ a {
       color: $dark-75;
       font-weight: bold;
     }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.hidden {
+  height: 0;
+}
+
+.d-none {
+  display: none;
 }
 
 // Instead .container 

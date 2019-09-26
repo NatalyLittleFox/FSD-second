@@ -7,10 +7,23 @@ block variables
     - var title = 'Webpack + Pug';
     - var description = 'Description for Webpack + Pug';
     - var pageClass = 'index-page';
+    - let checkboxMode = "checkbox"
 
 block content 
-    include ../includes/modules/form-elements/dropdown/dropdown
-        +dropdownCountItem("Привет")
-        +dropdownItem('Хех')
+    include ../includes/modules/form-elements/checkbox/checkbox
+    +checkbox('Посрать', 'checkbox1')
+    +checkbox_rich('Больше мероприятие', 'Срать хочу пиздец', 'checkbox2')
+    .d-flex
+        - let values = ["Hi", "Goodbye", "Good Boy", "Посрать"]
+        - checkboxMode = "checkbox"
+        div
+            +checkbox_expandable('Жуй', values, 'HardBass')
+        - checkboxMode = "checkbox_rich"
+        - let valuesss = [["Hi", "How are you"], "Goodbye", "Good Boy", "Посрать"]
+        div
+            +checkbox_expandable('Жуй', valuesss, 'HardBassss')
+
+
+    
 
 block scripts

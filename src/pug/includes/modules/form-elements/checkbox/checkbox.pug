@@ -1,0 +1,30 @@
+mixin checkbox(description, id)
+    .checkbox-wrapper
+        li.checkbox
+            input(type="checkbox" id= id).checkbox__input
+            label(for= id).checkbox__label
+        span.checkbox__descr= description
+
+mixin checkbox_rich(heading, description, id)
+    .checkbox-wrapper
+        li.checkbox
+            input(type="checkbox" id= id).checkbox__input
+            label(for= id).checkbox__label
+        .checkbox_rich__text
+            h6.checkbox_rich__text__heading= heading
+            span.checkbox_rich__text__descr= description
+
+mixin checkbox_expandable(heading, array, name)
+    .checkbox_expandable
+        h3.checkbox_expandable__heading= heading
+        button.checkbox_expandable__button(id= name)
+    .checkbox_expandable__list(id= name)
+        - let counter = 0
+        - let values = array
+        while counter < array.length
+            if (checkboxMode=="checkbox_rich")
+                +checkbox_rich(array[counter][0], array[counter][1] ,'checkbox_'+array[counter][1]+'_'+counter)
+            else if(checkboxMode=="checkbox")
+                +checkbox(array[counter], 'checkbox_'+array[counter]+'_'+counter)
+            - counter++
+        //- 'checkbox_'+array[counter][1]+'_'+counter - эта лапша сделана, чтобы каждый id был уникален и при нажатии на один чекбокс не выделялся другой
