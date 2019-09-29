@@ -1,0 +1,45 @@
+.feedback {
+    display: flex;
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__image {
+            margin-bottom: 12px;
+            display: block;
+            min-width: 47.67px;
+            width: 47.67px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+            object-fit: cover;
+            object-position: center center;
+        }
+
+
+    }
+
+    &__content {
+        margin-left: 9.93px;
+        &__name {
+            line-height: 24px;
+            color: $dark-75;
+
+            h3,
+            .feedback-date {
+                line-height: 24px;
+                color: $dark-75;
+                font-size: 14px;
+                text-transform: none;
+            }
+        }
+
+        &-text {
+            margin-top: 10px;
+            max-width: 653px;
+            width: 100%;
+        }
+    }
+}

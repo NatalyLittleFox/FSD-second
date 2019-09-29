@@ -10,20 +10,12 @@ block variables
     - let checkboxMode = "checkbox"
 
 block content 
-    include ../includes/modules/form-elements/checkbox/checkbox
-    +checkbox('Посрать', 'checkbox1')
-    +checkbox_rich('Больше мероприятие', 'Срать хочу пиздец', 'checkbox2')
-    .d-flex
-        - let values = ["Hi", "Goodbye", "Good Boy", "Посрать"]
-        - checkboxMode = "checkbox"
-        div
-            +checkbox_expandable('Жуй', values, 'HardBass')
-        - checkboxMode = "checkbox_rich"
-        - let valuesss = [["Hi", "How are you"], "Goodbye", "Good Boy", "Посрать"]
-        div
-            +checkbox_expandable('Жуй', valuesss, 'HardBassss')
-
-
+    include ../includes/modules/form-elements/range-slider/range-slider
+    +rangeSlider({
+        id: 'a',
+        heading: 'heading',
+        coast: '10 000 - 20 000'
+    })
     
 
 block scripts

@@ -10,8 +10,13 @@ html {
   font-size: 14px;
 }
 
-*, *::after, *::before {
-box-sizing: inherit;
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -55,18 +60,18 @@ h3 {
   font-weight: bold;
 }
 
+
 li {
   list-style-type: none;
 }
 
 a {
-  text-decoration: none;
   color: $dark-50;
-  transition: 
-    &:hover {
-      color: $dark-75;
-      font-weight: bold;
-    }
+
+  &:hover {
+    text-decoration: none;
+    color: $dark-50;
+  }
 }
 
 .d-flex {

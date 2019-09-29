@@ -1,0 +1,18 @@
+include ../like-button/like-button
+//- {
+//-         src: ,
+//-         author:,
+//-         when: ,
+//-         id: ,
+//-         content: 
+//- }
+mixin feedback(options)
+    .feedback
+        .feedback__author
+            img(src= options.src).feedback__author__image
+            +likeButton(options.id)
+        .feedback__content
+            .feedback__content__name
+                h3= options.author
+                p.feedback-date= options.when
+            p.feedback__content-text= options.content

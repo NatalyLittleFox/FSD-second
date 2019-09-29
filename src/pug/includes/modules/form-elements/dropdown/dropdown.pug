@@ -2,3 +2,18 @@
     span.dropdown-selectedText
     button.dropdown-button(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
     .dropdown-menu(aria-labelledby='dropdownMenuButton') 
+
+//- Элемент списка с счётчиком
+mixin dropdownCountItem(itemName) 
+  .dropdown-item
+    span= itemName
+    .dropdown-item__quantity 
+      .dropdown-item__quantity__countButton.dropdown-item__quantity__countButton-minus
+      .dropdown-item__quantity__counter 0
+      .dropdown-item__quantity__countButton.dropdown-item__quantity__countButton-plus
+
+//- Элемент списка без счётчика
+
+mixin dropdownItem(itemName)
+  .dropdown-item
+    span= itemName

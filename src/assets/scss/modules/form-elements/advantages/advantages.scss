@@ -1,0 +1,28 @@
+.advantage {
+    display: inline-block;
+    border-bottom: 1px solid;
+    border-color: $dark-10;
+    padding-bottom: 17px;
+    &__content {
+        display: flex;
+        &__image {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__text {
+            margin-left: 10px;
+
+            h3,
+            p {
+                font-size: 14px;
+                color: $dark-75;
+                text-transform: none;
+                line-height: 24px;
+            }
+        }
+    }
+}

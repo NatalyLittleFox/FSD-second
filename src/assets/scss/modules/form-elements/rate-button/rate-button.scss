@@ -1,0 +1,13 @@
+.rate {
+
+    &__button {
+        display: inline-block;
+        background-image: url('/assets/img/star_border.svg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}

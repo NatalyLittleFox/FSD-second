@@ -1,0 +1,9 @@
+mixin bulletList(heading, items)
+    .bullet
+        ul.bullet-list
+            h3= heading
+            - let i = 0
+            while i < items.length
+                li.bullet-list__item= items[i]
+                - i++
+        

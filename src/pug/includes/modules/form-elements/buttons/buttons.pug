@@ -1,0 +1,6 @@
+mixin button(value, classes)
+    button(class=classes?classes:"").button= value
+
+
+mixin buttonLink(value, link, purple)
+    a(href=link?link:"#" class=purple?"link-purple":"").link= value

@@ -1,0 +1,6 @@
+mixin rangeSlider(options)
+    .range
+        .range__text
+            h3.range__text__heading= options.heading
+            span.range__text__coast= options.coast
+        input(type="range" min="0" max="10000" step="500" value="1" id= options.id).range__slider

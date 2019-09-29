@@ -1,5 +1,14 @@
 @import "../modules/header/header_default.scss";
 @import "../modules/header/header_logged.scss";
-@import "../modules/form-elements/text-field.scss";
-@import "../modules/form-elements/dropdown.scss";
-@import "../modules/form-elements/checkbox.scss";
+@import "../modules/form-elements/text-field/text-field.scss";
+@import "../modules/form-elements/dropdown/dropdown.scss";
+@import "../modules/form-elements/checkbox/checkbox.scss";
+@import "../modules/form-elements/radio-buttons/radio-buttons.scss";
+@import "../modules/form-elements/toggle/toggle.scss";
+@import "../modules/form-elements/like-button/like-button.scss";
+@import "../modules/form-elements/rate-button/rate-button.scss";
+@import "../modules/form-elements/buttons/buttons.scss";
+@import "../modules/form-elements/bullet-list/bullet-list.scss";
+@import "../modules/form-elements/feedback/feedback.scss";
+@import "../modules/form-elements/advantages/advantages.scss";
+@import "../modules/form-elements/range-slider/range-slider.scss";
