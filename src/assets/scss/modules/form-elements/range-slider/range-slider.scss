@@ -1,22 +1,72 @@
 .range {
     max-width: 266px;
-    &__text {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        &__heading, &__coast {
-            font-size: 12px;
-            line-height: 15px;
-        }
-        &__coast {
-            color: $dark-50;
+    width: 100%;
+    margin-top: 23px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    border: 1px solid;
+    border-color: $dark-25;
+
+    &__button {
+
+        &_1,
+        &_2 {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            cursor: move;
+            transform: translate(-1px, -4px);
+            border: 2px solid;
+            border-color: white;
+            border-radius: 50%;
+            background: $secondary-gradient;
+
         }
     }
-    &__slider {
+
+    &__between {
+        position: absolute;
         height: 6px;
-        appearance: none;
-        width: 100%;
-        border: 1px solid $dark-25;
-        border-radius: 3px;
+        width: 0px;
+        margin-top: -1px;
+        border: none;
+        background: $secondary-gradient;
+        background-color: #559933;
+    }
+
+    &-text {
+        display: flex;
+        height: 15px;
+        justify-content: space-between;
+        max-width: 266px;
+        &__input {
+            padding: 0;
+            line-height: 15px;
+            color: $dark-25;
+            max-width: 120px;
+            display: flex;
+            justify-content: space-between;
+            &-item {
+                display: inline-block;
+                .range_inpt1,
+                .range_inpt2 {
+                    text-align: center;
+                    display: inline-block;
+                    max-width: 45px;
+                    line-height: 15px;
+                    top: 0;
+                    color: $dark-25;
+                }
+            }
+            &-dash {
+                margin-left: 20px;
+            }
+        }
+
+        &__heading {
+            line-height: 15px;
+        }
     }
 }

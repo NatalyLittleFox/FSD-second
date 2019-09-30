@@ -1,6 +1,24 @@
+//- {
+//-     heading:,
+//-     id:,
+//-     min:,
+//-     max:,
+//- }
+
 mixin rangeSlider(options)
-    .range
-        .range__text
-            h3.range__text__heading= options.heading
-            span.range__text__coast= options.coast
-        input(type="range" min="0" max="10000" step="500" value="1" id= options.id).range__slider
+    .range-wrapper
+        .range-text
+            h3.range-text__heading= options.heading
+            .range-text__input 
+                .range-text__input-item
+                    input(id= options.id+"i1" class='range_inpt1' type='number' min=options.min?options.min:"1000" max=options.max?options.max:"15000")
+                    span.rouble ₽
+                span.input-dash -
+                .range-text__input-item
+                    input(id= options.id+"i2" class='range_inpt2' type='number' min=options.min?options.min:"1000" max=options.max?options.max:"15000")
+                    span.rouble ₽
+        div(id= options.id class="range")
+            div(id= options.id+'b' class="range__between" style='width:100px;')
+            button(id= options.id+"1" class="range__button_1" style='margin-left:0px;')
+            button(id= options.id+"2" class="range__button_2" style='margin-left:100px;')
+
