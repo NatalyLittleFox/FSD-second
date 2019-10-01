@@ -15,16 +15,25 @@
   box-sizing: border-box;
   z-index: 2;
   padding: 8px 0 8px 15px !important;
+  flex: 1 1 auto !important;
+
+  &-bordered {
+    border-radius: 4px;
+  }
 
   &-large {
     max-width: 320px;
+    width: 100%;
   }
 
   &-medium {
     max-width: 266px;
+    width: 100%;
+
   }
 
   &-small {
+    width: 100%;
     max-width: 150px;
   }
 
@@ -177,5 +186,8 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
+  }
+  &-heading {
+    margin-bottom: 5.44px;
   }
 }

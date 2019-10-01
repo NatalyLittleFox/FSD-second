@@ -1,0 +1,50 @@
+.registration {
+    height: 646px;
+
+    &__form {
+        margin-top: 20px;
+        .text-field-wrapper {
+            margin-top: 10px;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+        &__birthday {
+            margin-top: 19.56px;
+        }
+        &__radio {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10.44px;
+            .radio {
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &__login-data {
+            margin-top: 20px;
+
+            &__subscribe-toggle {
+                display: flex;
+                margin-top: 10px;
+            }
+        }
+        &__button {
+            margin-top: 20px;
+        }
+
+        &__have-account {
+            display: flex;
+            justify-content: space-between;
+            height: 44px;
+            margin-top: 30px;
+            span {
+                color: #000;
+                line-height: 44px;
+            }
+        }
+    }
+}

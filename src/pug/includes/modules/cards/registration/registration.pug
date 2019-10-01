@@ -1,0 +1,49 @@
+.card.registration
+    h1.registration__heading Регистрация аккаунта
+    .registration__form 
+        include ../../form-elements/text-field/text-field
+        +textField({
+            placeholder: 'Имя'
+        })
+        +textField({
+            placeholder: 'Фамилия'
+        })
+        .registration__form__radio
+            include ../../form-elements/radio-buttons/radio-buttons
+            - let choiceGender = [['Мужчина', 'man'], ['Женщина', 'woman']]
+            +radioSelect({
+                name: 'gender',
+                array: choiceGender,
+            })
+        .registration__form__birthday
+            +textField({
+                placeholder: 'ДД.ММ.ГГ',
+                heading: 'Дата рождения'
+            })
+        .registration__form__login-data
+            +textField({
+                heading: 'Данные для входа в сервис',
+                placeholder: 'Email'
+            })
+            +textField({
+                placeholder: 'Пароль'
+            })
+            .registration__form__login-data__subscribe-toggle
+                include ../../form-elements/toggle/toggle
+                +toggle({
+                    name: 'gettingSales',
+                    checked: false,
+                    text: 'Получать спецпредложения'
+                })
+        include ../../form-elements/buttons/buttons
+        .registration__form__button
+            +button({
+                class: "button-large button_fill",
+                value: 'Перейти к оплате',
+            })
+        .registration__form__have-account
+            span Уже есть аккаунт на Toxin
+            +button({
+                value: 'Войти'
+            })
+

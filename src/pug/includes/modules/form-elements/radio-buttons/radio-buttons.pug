@@ -5,8 +5,8 @@ mixin radioButton(text, id, name)
             label(for= id).radio__button__label
         span(id="radio__description_"+id).radio__description= text
 
-mixin radioSelect(array, name)
+mixin radioSelect(options)
     - let counter = 0
-    while counter < array.length
-        +radioButton(array[counter][0], array[counter][1], name)
+    while counter < options.array.length
+        +radioButton(options.array[counter][0], options.array[counter][1], options.name)
         - counter++

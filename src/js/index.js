@@ -1,14 +1,13 @@
 import $ from 'jquery';
+global.jquery = global.jQuery = global.$ = $;
 const bootstrap = require('bootstrap');
 const popperJS = require('popper.js');
-import * as dropdown from './dropdown/dropdown.js';
-import * as checkbox from './checkbox/checkbox.js';
-import * as likeButton from './like-button/like-button.js'
-import * as rateButton from './rate-button/rate-button.js'
-import * as rangeSlider from './range-slider/range-slider.js'
+import * as dropdown from './form-elements/dropdown/dropdown.js';
+import * as checkbox from './form-elements/checkbox/checkbox.js';
+import * as likeButton from './form-elements/like-button/like-button.js'
+import * as rateButton from './form-elements/rate-button/rate-button.js'
+import * as rangeSlider from './form-elements/range-slider/range-slider.js'
 
-
-global.jquery = global.jQuery = global.$ = $;
 
 dropdown.dropdownSelectedItem();
 dropdown.dropdownCounter();
@@ -19,4 +18,4 @@ likeButton.like()
 
 rateButton.rate();
 
-rangeSlider.slider();
+rangeSlider.slider('id');

@@ -8,7 +8,7 @@
 mixin rangeSlider(options)
     .range-wrapper
         .range-text
-            h3.range-text__heading= options.heading
+            h3.range-text__heading= options.heading?options.heading:""
             .range-text__input 
                 .range-text__input-item
                     input(id= options.id+"i1" class='range_inpt1' type='number' min=options.min?options.min:"1000" max=options.max?options.max:"15000")

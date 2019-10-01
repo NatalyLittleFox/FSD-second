@@ -1,7 +1,12 @@
-.dropdown
-    span.dropdown-selectedText
-    button.dropdown-button(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-    .dropdown-menu(aria-labelledby='dropdownMenuButton') 
+mixin dropdown(options)
+  .dropdown-wrapper
+    h3.dropdown-heading= options.heading ? options.heading : ""
+    .dropdown(class= options.class ? options.class : "")
+        span.dropdown-selectedText= options.selectedText ? options.selectedText: ""
+        button.dropdown-button(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        .dropdown-menu(aria-labelledby='dropdownMenuButton') 
+        if block 
+          block
 
 //- Элемент списка с счётчиком
 mixin dropdownCountItem(itemName) 

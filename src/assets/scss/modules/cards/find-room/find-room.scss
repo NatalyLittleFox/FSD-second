@@ -1,0 +1,24 @@
+.find-room {
+    height: 374px;
+    box-sizing: padding-box;
+    padding-bottom: 30px;
+    &__heading {
+        max-width: 320px;
+        width: 100%;
+    }
+    .dropdown-wrapper {
+        margin-top: 20px;
+    }
+    &__dropdowns {
+        &-date {
+            display: flex;
+            justify-content: space-between;
+            .dropdown {
+                width: 150px;
+            }
+        }
+    }
+    &__button {
+        margin-top: 30.44px;
+    }
+}

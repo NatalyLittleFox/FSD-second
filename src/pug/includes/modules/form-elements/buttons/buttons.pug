@@ -1,6 +1,6 @@
-mixin button(value, classes)
-    button(class=classes?classes:"").button= value
+mixin button(options)
+    button(class=options.class?options.class:"").button= options.value
 
 
-mixin buttonLink(value, link, purple)
-    a(href=link?link:"#" class=purple?"link-purple":"").link= value
+mixin buttonLink(options)
+    a(href=options.link?options.link:"#" class=options.class?options.class:"").link= options.value

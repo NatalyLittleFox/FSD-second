@@ -1,8 +1,8 @@
-mixin toggle(toggleText, checked, name)
+mixin toggle(options)
     .d-flex
         .toggle
-            input(type="checkbox" class="toggle__button" id= name checked= checked)
-            label(for= name class="toggle__label")
+            input(type="checkbox" class="toggle__button" id= options.name checked= options.checked)
+            label(for= options.name class="toggle__label")
                 span
         .toggle-text 
-            span.toggle__text__content= toggleText
+            span.toggle__text__content= options.text

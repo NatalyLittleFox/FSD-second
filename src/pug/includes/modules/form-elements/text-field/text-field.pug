@@ -1,0 +1,5 @@
+mixin textField(options)
+    .text-field-wrapper 
+        if options.heading
+            h3= options.heading
+        input.text-field(placeholder= options.placeholder class= options.class ? options.class : "")

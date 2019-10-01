@@ -1,14 +1,13 @@
-const slider = () => {
-    setTimeout(init2slider('id66', 'id66b', 'id661', 'id662', 'id66i1', 'id66i2'), 0);
+const slider = (id) => {
+    setTimeout(init2slider(id), 0);
 
-function init2slider(idX, btwX, btn1X, btn2X, input1, input2) {
+function init2slider(idX) {
     var slider = document.getElementById(idX);
-    var between = document.getElementById(btwX); 
-    var button1 = document.getElementById(btn1X);
-    var button2 = document.getElementById(btn2X);   
-    var inpt1 = document.getElementById(input1); 
-    var inpt2 = document.getElementById(input2); 
-  	
+    var between = document.getElementById(idX+'b'); 
+    var button1 = document.getElementById(idX+'1');
+    var button2 = document.getElementById(idX+'2');   
+    var inpt1 = document.getElementById(idX+'i1'); 
+    var inpt2 = document.getElementById(idX+'i2'); 
             var min=inpt1.min;
   					var max=inpt1.max;
     

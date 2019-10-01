@@ -1,0 +1,28 @@
+.card.find-room
+    h1.find-room__heading Найдём номера под <br> ваши пожелания
+    .find-room__dropdowns
+        include ../../form-elements/dropdown/dropdown
+        .find-room__dropdowns-date
+            +dropdown({
+                class: 'dropdown-bordered dropdown-small',
+                selectedText: 'ДД.ММ.ГГ',
+                heading: 'Прибытие'
+            })
+            +dropdown({
+                class: 'dropdown-bordered dropdown-small',
+                selectedText: 'ДД.ММ.ГГ',
+                heading: 'Выезд'
+            })
+        .find-room__dropdown-guests
+            +dropdown({
+                heading: 'Гости',
+                selectedText: 'Сколько гостей',
+                class: 'dropdown-bordered dropdown-large',
+
+            })
+    .find-room__button
+        include ../../form-elements/buttons/buttons
+        +button({
+            class: 'button-large button_fill',
+            value: 'Подобрать номер'
+        })

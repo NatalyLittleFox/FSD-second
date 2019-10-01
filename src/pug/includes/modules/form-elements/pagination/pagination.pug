@@ -1,0 +1,15 @@
+mixin pagination(options)
+    .pagination
+        h3.pagination__heading= options.heading ? options.heading: ""
+        ul.pagination__buttons
+            a.pagination__buttons__item(href="#") 1
+            a.pagination__buttons__item(href="#") 2
+            a.pagination__buttons__item(href="#") 3
+            a.pagination__buttons__item(href="#") ...
+            a.pagination__buttons__item(href="#") 15
+            a.pagination__buttons__item(href="#")
+        p.pagination__text 1 из 100+ вариантов аренды
+
+//- {
+//-     heading:
+//- }

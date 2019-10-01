@@ -8,8 +8,7 @@
     padding: 13px 0 13px 15px;
     outline: none;
     color: $dark-75;
-
-
+    margin-top: 5px;
     @include placeholder {
         color: $dark-25;
     }

@@ -23,6 +23,11 @@
             border-radius: 50%;
             background: $secondary-gradient;
 
+
+            &:focus {
+                outline: none;
+
+            }
         }
     }
 
@@ -41,6 +46,7 @@
         height: 15px;
         justify-content: space-between;
         max-width: 266px;
+
         &__input {
             padding: 0;
             line-height: 15px;
@@ -48,8 +54,10 @@
             max-width: 120px;
             display: flex;
             justify-content: space-between;
+
             &-item {
                 display: inline-block;
+
                 .range_inpt1,
                 .range_inpt2 {
                     text-align: center;
@@ -60,6 +68,7 @@
                     color: $dark-25;
                 }
             }
+
             &-dash {
                 margin-left: 20px;
             }
