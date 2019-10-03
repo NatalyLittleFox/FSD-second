@@ -9,7 +9,6 @@
   border-color: $dark-25;
   display: block;
   outline: none;
-  max-width: 320px;
   position: relative;
   @include appearance;
   box-sizing: border-box;
@@ -17,6 +16,10 @@
   padding: 8px 0 8px 15px !important;
   flex: 1 1 auto !important;
 
+  &-wrapper {
+    max-width: 320px;
+    width: 100%;
+  }
   &-bordered {
     border-radius: 4px;
   }

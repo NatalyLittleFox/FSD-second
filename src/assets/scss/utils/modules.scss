@@ -1,6 +1,8 @@
 @import "../modules/header/header_default.scss";
 @import "../modules/header/header_logged.scss";
 
+// FORM ELEMENTS
+
 @import "../modules/form-elements/text-field/text-field.scss";
 @import "../modules/form-elements/dropdown/dropdown.scss";
 @import "../modules/form-elements/checkbox/checkbox.scss";
@@ -15,8 +17,14 @@
 @import "../modules/form-elements/range-slider/range-slider.scss";
 @import "../modules/form-elements/pagination/pagination.scss";
 
+// CARDS
+
 @import "../modules/cards/card.scss";
 @import "../modules/cards/find-room/find-room.scss";
 @import "../modules/cards/registration/registration.scss";
+@import "../modules/cards/login/login.scss";
+@import "../modules/cards/reserve/reserve.scss";
+
+
 
 

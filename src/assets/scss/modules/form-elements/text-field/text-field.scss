@@ -8,7 +8,13 @@
     padding: 13px 0 13px 15px;
     outline: none;
     color: $dark-75;
-    margin-top: 5px;
+
+    &-wrapper {
+        margin-top: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
     @include placeholder {
         color: $dark-25;
     }

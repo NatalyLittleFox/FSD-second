@@ -1,0 +1,20 @@
+.card.login
+    h1.login__heading Войти
+    form.login__form
+        include ../../form-elements/text-field/text-field
+        +textField({
+            placeholder: 'Email',
+        })
+        +textField({
+            placeholder: 'Пароль',
+        })
+        include ../../form-elements/buttons/buttons
+        +button({
+            class: 'button_fill button-large',
+            value: 'Войти'
+        })
+    .login__no-have-account
+        span.login__no-have-account__text Нет аккаунта на Toxin? 
+        +button({
+            value: 'Создать'
+        })

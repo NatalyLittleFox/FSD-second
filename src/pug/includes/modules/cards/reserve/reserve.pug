@@ -1,0 +1,49 @@
+.card.reserve 
+    .reserve__text 
+        .reserve__text__number
+            span.reserve__text__number__symbol №
+            span.reserve__text__number__value 888
+            span.reserve__text__number__class ЛЮКС
+        .reserve__text__coast
+            span.reserve__text__coast__sum 9    990
+            span.reserve__text__coast__per-time в сутки
+    .reserve__form 
+        .reserve__form__time
+            include ../../form-elements/dropdown/dropdown
+            +dropdown({
+                heading: 'Прибытие',
+                class: 'dropdown-bordered dropdown-small',
+            })
+            +dropdown({
+                heading: 'Выезд',
+                class: 'dropdown-bordered dropdown-small',
+            })
+        .reserve__form__guests 
+            +dropdown({
+                heading: 'Гости',
+                class: 'dropdown-bordered dropdown-large',
+            })
+        .reserve__form__taxes
+            .reserve__form__taxes__item 
+                span.reserve__form__taxes__item-name 9 990₽ х 4 суток
+                span.reserve__form__taxes__item-coast 39 960₽
+            .reserve__form__taxes__item 
+                span.reserve__form__taxes__item-name Сбор за услуги: скидка 2 179₽ 
+                b.reserve__form__taxes__item-info i
+                span.reserve__form__taxes__item-coast 0₽
+            .reserve__form__taxes__item 
+                span.reserve__form__taxes__item-name Сбор за дополнительные услуги
+                b.reserve__form__taxes__item-info i
+                span.reserve__form__taxes__item-coast 300₽           
+            .reserve__form__taxes__total 
+                span.reserve__form__taxes__total-name Итого
+                .reserve__form__taxes__total-border
+                span.reserve__form__taxes__total-coast 38 081₽
+        .reserve__button
+            include ../../form-elements/buttons/buttons
+            +button({
+                class: 'button_fill button-large',
+                value: 'Забронировать'
+            })
+
+

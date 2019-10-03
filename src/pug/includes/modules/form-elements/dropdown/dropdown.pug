@@ -1,5 +1,5 @@
 mixin dropdown(options)
-  .dropdown-wrapper
+  .dropdown-wrapper(class= options.class ? options.class : "")
     h3.dropdown-heading= options.heading ? options.heading : ""
     .dropdown(class= options.class ? options.class : "")
         span.dropdown-selectedText= options.selectedText ? options.selectedText: ""

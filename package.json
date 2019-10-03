@@ -32,6 +32,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",

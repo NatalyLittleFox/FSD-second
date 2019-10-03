@@ -1,0 +1,139 @@
+.reserve {
+    height: 511px;
+    padding-bottom: 30px;
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        &__number {
+            font-weight: bold;
+
+            &__symbol,
+            &__class {
+                font-size: .9rem;
+            }
+
+            &__value,
+            &__symbol {
+                font-family: 'Quicksand', sans-serif;
+                color: $dark-100;
+            }
+
+            &__symbol {
+                margin-right: 2px;
+            }
+
+            &__class {
+                color: $purple;
+                margin-left: 5px;
+            }
+            &__value {
+                font-size: 1.8rem;
+                line-height: 1.95rem;
+            }
+        }
+
+        &__coast {
+            color: $dark-50;
+            margin-top: 5px;
+            &__sum {
+                font-weight: bold;
+                margin-right: 3px;
+                &:after {
+                    content: '₽';
+                }
+            }
+
+            &__per-time {
+                font-weight: normal;
+                font-size: .875rem;
+                
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+
+        &__time {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__guests {
+            margin-top: 20px;
+        }
+
+        &__taxes {
+            margin-top: 20px;
+
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                position: relative;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &-name {
+                    max-width: 214px;
+                    line-height: 18px;
+                }
+                &-coast {
+                    position: relative;
+                    top: -2px;
+                    right: -1px;
+                }
+                &-info {
+                    border: 1px solid $dark-25;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    text-transform: none;
+                    font-family: 'Montserrat',sans-serif;
+                    color: $dark-25;
+                    text-align: center;
+                    line-height: 19px;
+                    position: absolute;
+                    right: 79px;
+                }
+            }
+
+            &__total {
+                display: flex;
+                justify-content: space-between;
+                font-display: row;
+                align-items: flex-end;
+                margin-top: 30px;
+                height: 24px;
+                line-height: 24px;
+
+                &-name,
+                &-coast {
+                    font-family: 'Quicksand', sans-serif;
+                    font-weight: bold;
+                    color: $dark-100;
+                    font-size: 19px;
+                }
+
+                &-border {
+                    width: 182px;
+                    height: .48px;
+                    background: url('/assets/img/dash.svg') no-repeat;
+                    background-size: auto;
+                    background-position: center bottom;
+                    margin-bottom: 4px;
+                }
+                &-name {
+                    position: relative;
+                    letter-spacing: 1px;
+                    margin-left: 1px;
+                }
+            }
+        }
+    }
+    &__button {
+        margin-top: 20px;
+    }
+}   
