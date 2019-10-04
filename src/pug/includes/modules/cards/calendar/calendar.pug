@@ -1,0 +1,11 @@
+.calendar-wrapper
+    .calendar
+        .calendar__buttons
+            include ../../form-elements/buttons/buttons
+            +buttonLink({
+                value: 'Очистить'
+            })
+            +buttonLink({
+                value: 'Применить',
+                class: 'link-purple'
+            })

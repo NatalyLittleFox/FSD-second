@@ -1,0 +1,160 @@
+.calendar {
+    display: inline-block;
+    position: relative;
+    box-shadow: $box-shadow-20-05;
+    .datepicker {   
+        width: 320px;
+        height: 369px;
+        padding: 20px 20.2px;
+        box-sizing: border-box;
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        &--nav {
+            border-bottom: none;
+            min-height: 20.2px;
+            &-title {
+                font-family: 'Quicksand', sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 19px;
+                line-height: 20.2px;
+                color: $dark-100;
+
+                i {
+                    color: $dark-100;
+                }
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+
+            &-action {
+                width: 23.93px;
+                height: 24px;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    path {
+                        fill: $purple;
+                        stroke: none;
+                        stroke-width: none;
+                    }
+                }
+
+                &:hover {
+                    background: transparent;
+                }
+
+            }
+        }
+
+        &--days {
+            &-names {
+                margin-top: 30px;
+                justify-content: space-around;
+            }
+        }
+
+        &--day {
+            &-name {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                color: $purple;
+                font-size: 12px;
+                width: 39.58px;
+                height: 40px;
+                flex: 0;
+            }
+        }
+
+        &--cell {
+            &-day {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+                border-radius: 50%;
+                width: 39.58px;
+                height: 40px;
+                color: $dark-50;
+
+                &.-other-month- {
+                    color: $dark-25;
+                }
+
+            }
+
+            &.-current- {
+                background: $secondary-gradient;
+                font-weight: bold;
+                color: white;
+            }
+        }
+
+        .-range {
+            &-from-,
+            &-to- {
+                position: relative;
+                &:before {
+                    content: '';
+                    background: $purple-25;
+                    position: absolute;
+                    z-index: -1;
+                    @include resetPosition;
+                }
+            }
+            &-from- {
+                &:before {
+                    width: 50%;
+                    right: 0;
+                    left: auto;
+                }
+
+            }
+            &-to- {
+                &:before {
+                    width: 50%;
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+
+        .-selected- {
+            background: $primary-gradient;
+            color: white;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .-in-range- {
+            background: $purple-25;
+
+            // &:last-child {
+            //     transform: translateX(10px)
+            // }
+            &.datepicker--cell-day {
+                border-radius: 0px;
+
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        padding: 0 20px 20px 20px;
+        font-size: 12px;
+        
+        a {
+            line-height: 10px;
+        }
+    }
+}

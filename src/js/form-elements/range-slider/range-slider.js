@@ -1,5 +1,5 @@
 const slider = (id) => {
-    setTimeout(init2slider(id), 0);
+    // setTimeout(init2slider(id), 0);
 
 function init2slider(idX) {
     var slider = document.getElementById(idX);

@@ -1,3 +1,49 @@
-footer
-  .container
-    span footer is here
+footer.footer
+  .footer__content
+    .footer__content__description
+      .logo
+      p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+    .footer__content__links
+      nav.footer__content__links__navigation
+        h3 Navigation
+        li 
+          a About Us
+        li 
+          a News
+        li 
+          a Supports
+        li 
+          a Products
+      nav.footer__content__links__about-us
+        h3 About Us
+        li 
+          a Who we are
+        li 
+          a Our team
+        li 
+          a Careers
+        li 
+          a Investors
+      nav.footer__content__links__support
+        h3 Support
+        li 
+          a Documentation
+        li 
+          a Community
+        li 
+          a Get in Touch
+    .footer__content__subscribe
+      h3 Subscribe to our newsletter
+      p Receive our latest news and 
+        | promotions in your inbox!
+      include ../form-elements/text-field/text-field
+      +subscription({
+        placeholder: 'Your email address'
+      })
+  .footer__copyright
+    span.footer__copyright__text Copyright © 2018 Toxin UI Kit. All rights reserved.
+    .footer__copyright__socials 
+      i.social-twitter.social
+      i.social-facebook.social
+      i.social-instagram.social
+      

@@ -1,0 +1,30 @@
+mixin preview(options)
+    .preview-wrapper
+        .preview
+            .preview__image(style=options.image ? `background-image: url('${options.image}')`: "background-image: url('/assets/img/image1.svg')")
+                .preview__image__arrows
+                    a.preview__image__arrows-item
+                    a.preview__image__arrows-item
+            .preview__counter
+                button.preview__counter-button.current
+                button.preview__counter-button
+                button.preview__counter-button
+                button.preview__counter-button
+            .preview__content
+                .preview__content__description
+                    .preview__content__description__room
+                        span.preview__content__description__room__symbol №
+                        span.preview__content__description__room__value 888
+                        span.preview__content__description__room__class люкс
+                    .preview__content__description__coast
+                        b.preview__content__description__coast__value 9 990 
+                        span.preview__content__description__coast__per-time в сутки
+                hr.preview__content__description__line
+                .preview__content__feedbacks
+                    include ../../form-elements/rate-button/rate-button
+                    +rateButton({
+                        rating: 3
+                    })
+                    .preview__content__feedbacks__counter
+                        b.preview__content__feedbacks__counter__value 145
+                        span.preview__content__feedbacks__counter__text Отзывов

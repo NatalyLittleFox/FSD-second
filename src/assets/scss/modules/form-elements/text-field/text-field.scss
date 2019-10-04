@@ -47,6 +47,10 @@
             outline: none;
             width: 223px;
             padding: 13px 0 13px 15px;
+            
+            @include placeholder {
+                color: $dark-25;
+            }
         }
 
         &__button {

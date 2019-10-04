@@ -1,0 +1,22 @@
+mixin header(options)
+    header.header 
+        .logo
+        nav.header__nav
+            a.header__nav__link.header__nav__link_active Home
+            a.header__nav__link About 
+            a.header__nav__link Services  
+            a.header__nav__link Careers
+            a.header__nav__link News
+            a.header__nav__link Documentation
+        .header__log
+            if options.logged
+                span.header__log__name Name Surname
+            else if !options.logged
+                include ../form-elements/buttons/buttons
+                +button({
+                    value: 'Login'
+                })
+                +button({
+                    value: 'Register',
+                    class: 'button_fill'
+                })

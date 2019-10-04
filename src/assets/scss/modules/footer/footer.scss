@@ -1,1 +1,61 @@
-// footer style
+.footer {
+    width: 100%;
+    height: 443px;
+    padding: 104px 140px 0 140px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 120px;
+        border-bottom: 1px solid $dark-10;
+        &__description {
+            margin-top: -12px;
+            p {
+                max-width: 260px;
+                margin-top: 20px;
+            }
+        }
+        &__links {
+            display: flex;
+            justify-content: space-between;
+            width: 513px;
+            &__navigation, &__about-us, &__support {
+                li {
+                    margin-top: 20px;
+                }
+            }
+            &__navigation {
+                margin-left: 40px;
+            }
+        }
+        &__subscribe {
+            p {
+                margin-top: 21px;
+                width: 196px;
+                color: $dark-75;
+            }
+            .text-field-wrapper {
+                margin-top: 20px;
+            }
+        }
+    }
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: 23px 0;
+        &__socials {
+            display: flex;
+            .social {
+                &:first-child {
+                    margin-right: 20px;
+                }
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
+        }
+        &__text {
+
+        }
+    }
+}

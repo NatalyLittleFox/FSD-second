@@ -3,3 +3,9 @@ mixin textField(options)
         if options.heading
             h3= options.heading
         input.text-field(placeholder= options.placeholder class= options.class ? options.class : "")
+
+mixin subscription(options)
+    .text-field-wrapper
+        .text-field_subscription.text-field
+            input.text-field_subscription__input(placeholder=options.placeholder class= options.class ? options.class : "")
+            input.text-field_subscription__button

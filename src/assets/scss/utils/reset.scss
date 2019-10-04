@@ -24,6 +24,9 @@ a {
   &:active, &:hover {
     outline: 0;
   }
+  &:not([href]) {
+    cursor: pointer;
+  }
 }
 
 // List

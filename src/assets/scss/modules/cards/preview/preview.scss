@@ -1,0 +1,194 @@
+.preview {
+    width: 270px;
+    height: 257.5px;
+    box-shadow: $box-shadow-20-05;
+    border-radius: 4px;
+    position: relative;
+
+    &__image {
+        height: calc(100%-106.12px);
+        display: flex;
+        align-items: center;
+        z-index: 0;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+        transition: $transition;
+        &::before,
+        &::after {
+            border-radius: 4px 4px 0 0;
+            content: '';
+            display: block;
+            width: 42px;
+            height: 100%;
+            @include resetPosition;
+            position: absolute;
+            z-index: 0;
+        }
+
+        &::before {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 10%);
+            left: 0;
+            right: auto;
+        }
+
+        &::after {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            right: 0;
+            left: auto;
+        }
+
+        &__arrows {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+
+            &-item {
+                display: block;
+                width: 44px;
+                height: 100%;
+                background-color: transparent;
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+
+                &:first-child {
+                    background-image: url('/assets/img/expand_more-white.svg');
+                }
+
+                &:last-child {
+                    background-image: url('/assets/img/expand_more-white-right.svg');
+                }
+            }
+        }
+    }
+
+    &__counter {
+        width: 41.25px;
+        height: 7.49px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: calc(-7.49px-15.11px) 15px 0 auto;
+
+        &-button {
+            width: 7.5px;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid white;
+            background: none;
+            box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+            transition: $transition;
+
+            &.current {
+                background: white;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 106.12px;
+        position: absolute;
+        bottom: 0;
+        padding: 20.2px 17px 19px 20px;
+
+        &__description {
+            display: flex;
+            justify-content: space-between;
+
+            &__room {
+
+                &__symbol,
+                &__value {
+                    font-family: 'Quicksand', sans-serif;
+                    font-weight: bold;
+                    color: $dark-100;
+                }
+
+                &__symbol {
+                    font-size: 1rem;
+                    margin-right: 3.3px;
+                }
+
+                &__value {
+                    font-size: 1.4rem;
+                }
+
+                &__class {
+                    text-transform: uppercase;
+                    color: $purple;
+                    font-size: 0.857rem;
+                    font-weight: bold;
+                    margin-left: 4.5px;
+                }
+            }
+
+            &__coast {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1px;
+
+                &__value,
+                &__per-time {
+                    color: $dark-50;
+                }
+
+                &__value {
+                    font-weight: bold;
+                    margin-right: 4px;
+
+                    &::after {
+                        content: '₽';
+                        margin-left: -4px;
+                    }
+                }
+
+                &__per-time {
+                    font-size: .9rem;
+                    word-spacing: -1.5px;
+                }
+            }
+
+            &__line {
+                display: block;
+                max-width: 230px;
+                width: 100%;
+                margin-top: 7px;
+            }
+        }
+
+        &__feedbacks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+
+            &__counter {
+                margin-right: 3px;
+                &__text,
+                &__value {
+                    color: $dark-50;
+                }
+
+                &__value {
+                    margin-right: 4px;
+
+                }
+            }
+
+
+        }
+    }
+
+
+}

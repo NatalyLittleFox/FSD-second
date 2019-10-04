@@ -1,0 +1,17 @@
+.footer-creative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 440px 110px 440px;
+    p {
+        margin-top: 20px;
+        width: 560px;
+        text-align: center;
+    }
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        width: 112px;
+        margin-top: 25px;
+    }
+}

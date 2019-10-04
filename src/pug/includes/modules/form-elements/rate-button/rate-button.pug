@@ -1,6 +1,10 @@
-mixin rateButton()
-    - let span = 0
+mixin rateButton(options)
+    - let unborder = 0
+    - let border = 0
     .rate
-        while span < 5
-            span.rate__button
-            - span++
+        while unborder < options.rating
+            span(style="background-image: url('/assets/img/star.svg')").rate__button
+            - unborder++
+        while border < 5-options.rating
+            span(style="background-image: url('/assets/img/star_border.svg')").rate__button
+            - border++

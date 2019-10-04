@@ -1,0 +1,72 @@
+.header {
+    padding: 15px 140px;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    box-shadow: $box-shadow-20-05;
+
+    &__nav {
+        height: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: 0;
+        &__link {
+            margin-right: 30px;
+            display: inline-block;
+            line-height: 40px;
+            position: relative;
+            cursor: pointer;
+            color: $dark-50;
+            &:nth-child(3) {
+                &::after {
+                    content: '';
+                    background-image: url('/assets/img/expand_more.svg');
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-position: center center;
+                    width: 24px;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    @include resetPosition;
+                    margin-left: auto;
+                    margin-right: -25px;
+                    margin-top: 1px;
+                    transition: $transition;
+                    &:hover {
+                        margin-top: 3px;
+                    }
+                }
+            }
+            &_active {
+                color: $dark-75;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__log {
+        display: flex;
+        align-items: center;
+        .button {
+            &:first-child {
+                margin-right: 20px;
+                width: 79px;
+                height: 34px;
+            }
+            &:last-child {
+                width: 104px;
+                height: 34px;
+            }
+        }
+        &__name {
+            color: $dark-50;
+            display: inline-block;
+            border-left: 1px solid $dark-10;
+            padding-left: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}

@@ -26,6 +26,9 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: $dark-75;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -75,6 +78,11 @@ a {
   }
 }
 
+hr {
+  margin: 0;
+  padding: 0;
+}
+
 .d-flex {
   display: flex;
 }
@@ -85,6 +93,13 @@ a {
 
 .d-none {
   display: none;
+}
+
+.logo {
+  background-image: url('/assets/img/Logo.svg');
+  background-size: auto;
+  width: 105.69px;
+  height: 40px;
 }
 
 input::-webkit-outer-spin-button,
