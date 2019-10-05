@@ -3,7 +3,6 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -54,14 +53,6 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.vue$/,
-      loader: 'vue-loader',
-      options: {
-        loader: {
-          scss: 'vue-style-loader!css-loader!sass-loader'
-        }
-      }
-    }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
@@ -111,7 +102,6 @@ module.exports = {
     }
   },
   plugins: [
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),

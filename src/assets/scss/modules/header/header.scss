@@ -4,21 +4,27 @@
     justify-content: space-between;
     height: 70px;
     width: 100%;
-    box-shadow: $box-shadow-20-05;
+    max-width: 1440px;
 
+    @media screen and (max-width: 1025px) {
+        padding: 15px 40px;
+    }
     &__nav {
         height: 100%;
         display: flex;
         margin-left: auto;
         margin-right: 0;
+        @media screen  and (max-width: 769px){
+            display: none;
+        }
         &__link {
-            margin-right: 30px;
-            display: inline-block;
-            line-height: 40px;
+            margin-left: 30px;
+            display: block;
             position: relative;
             cursor: pointer;
             color: $dark-50;
-            &:nth-child(3) {
+            line-height: 40px;
+            &:nth-child(2), &:nth-child(5) {
                 &::after {
                     content: '';
                     background-image: url('/assets/img/expand_more.svg');
@@ -27,17 +33,20 @@
                     background-position: center center;
                     width: 24px;
                     height: 100%;
-                    display: block;
+                    display: inline-block;
                     position: absolute;
-                    @include resetPosition;
-                    margin-left: auto;
-                    margin-right: -25px;
-                    margin-top: 1px;
-                    transition: $transition;
-                    &:hover {
-                        margin-top: 3px;
-                    }
+                    top: 0;
+                    bottom: 0;
                 }
+            }
+            &:nth-child(3) {
+                margin-left: 44px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 44px;
             }
             &_active {
                 color: $dark-75;
@@ -50,13 +59,13 @@
         display: flex;
         align-items: center;
         .button {
-            &:first-child {
+            &-login {
                 margin-right: 20px;
-                width: 79px;
+                width: 87px;
                 height: 34px;
             }
-            &:last-child {
-                width: 104px;
+            &-register {
+                width: 196px;
                 height: 34px;
             }
         }
@@ -68,5 +77,8 @@
             height: 30px;
             line-height: 30px;
         }
+    }
+    &__mobile {
+        display: none;
     }
 }

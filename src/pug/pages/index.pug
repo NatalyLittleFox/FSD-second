@@ -3,13 +3,20 @@ extends ../layout/main
 block head
 
 block variables
-    - var title = 'Webpack + Pug';
-    - var description = 'Description for Webpack + Pug';
-    - var pageClass = 'index-page';
+    - var title = 'Toxin';
+    - var description = 'Toxin web page';
+    - var pageClass = 'landing-page';
     - let checkboxMode = "checkbox"
 
+block header
+    include ../includes/modules/header/header
+    +header({})
+
 block content 
-    include ../includes/modules/footer/footer-creative
+    section.landing-page-content
+block footer
+    include ../includes/modules/footer/footer
+
 
 
     
